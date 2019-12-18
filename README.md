@@ -23,8 +23,3 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 # vue-list
-# vue-Todelist
-# vue-Todolist
-# vue-Todolist
-# vue-Todolist
-# vue-Todolist
