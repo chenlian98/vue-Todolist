@@ -1,12 +1,14 @@
 <template>
     <div class="todo-container">
-        <ol>
-            <li v-for="(item, index ) in todos" :key="index">{{ item }}</li>
-        </ol>
-        <div class="input">
+        <div class="box">
             <input type="text" v-model="item">
-            <button v-on:click="btnTodo">提交</button>
+            <button v-on:click="btnTodo">创建</button>
         </div>
+        <ul>
+            <li v-for="(item, index ) in todos" :key="index">{{ item }}
+                <i class="fa fa-close"></i>
+            </li>
+        </ul>
     </div>
 </template>
 
@@ -31,19 +33,34 @@
                 }else {
                     //this.todos.push(this.item)
                     this.todos = [...this.todos, this.item]
-                    //this.todos = this.todos.concat([this.item])
                     this.item = ''
                 }
-               // console.log(this.item)
+
             }
         }
     }
 </script>
 
-<style>
-.todo-container{
-    float: left;
+<style lang="scss">
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+   .todo-container{
     width: 500px;
-    margin: 0 auto;
-}
+    margin: 50px auto;
+    }
+   .box input,button {
+       box-sizing: border-box;
+       height: 50px;
+       border: 1px solid aqua;
+       padding: 0 10px;
+    }
+
+
+
+
+
+
 </style>
